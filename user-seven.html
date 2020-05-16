@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="css/three-dots.css" />
+    <link rel="stylesheet" href="css/user-style.css" />
+    <title>User Account</title>
+</head>
+<body>
+
+    <section id="sec">
+
+        <!-- SIDE NAVIGATION -->
+        <div class="sidenav">
+            <button class="navitem" onclick="openContent(event, 'feeds')" id="defaultOpen">Feeds</button>
+            <button class="navitem" onclick="openContent(event, 'notes')">Notes</button>
+            <button class="navitem" onclick="openContent(event, 'chats')">Chats</button>
+            <button class="navitem" onclick="openContent(event, 'profile')">My Profile</button>
+            <button class="navitem" onclick="signOut()">Sign Out</button>
+        </div>
+
+        <!-- NAVIGATION CONTENTS -->
+        <!-- FEEDS -->
+        <div class="navcontent" id="feeds">
+            <button id="Btn_a">Refresh</button>  <!-- FUNC BUTTON -->
+            <h4>Feeds</h4>
+            <p><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</b><br /> Vestibulum semper neque eget faucibus ultricies. Curabitur et nibh vitae erat malesuada mattis. Aliquam sollicitudin eleifend porttitor. Aliquam consequat ipsum at facilisis ornare. <a href="#">Read More</a></p>
+            <p><b>Nulla eu lectus id dolor lacinia efficitur quis ac ex.</b><br /> Curabitur faucibus porttitor nisi. Ut sapien neque, facilisis a tortor sit amet, dictum semper mi. Nunc rutrum dolor ut fermentum posuere. <a href="#">Read More</a></p>
+            <p><b>Nam faucibus augue risus.</b><br /> Aliquam nibh lorem, sagittis eu felis et, fringilla sodales nisl. Integer quis euismod orci. Pellentesque aliquam lectus id nibh elementum mollis. Etiam vitae lacus luctus felis hendrerit efficitur at ac nulla. <a href="#">Read More</a></p>
+            <p><b>Cras sem ex, laoreet non mollis faucibus, facilisis sit amet magna.</b><br /> Morbi sed iaculis mi. Praesent aliquam dictum ante, eget vulputate odio. Cras tincidunt pellentesque odio, a dapibus tellus fringilla vitae. Maecenas vitae arcu nisl. <a href="#">Read More</a></p>
+            <p><b>In mollis, nibh id semper tincidunt, massa massa dictum mauris, non commodo est eros sit amet neque.</b><br /> Nulla non eros suscipit, ultricies ligula at, rutrum metus. In interdum ipsum quis semper convallis. Sed ut dolor tellus. <a href="#">Read More</a></p>
+            <p><b>Vestibulum luctus maximus luctus.</b><br /> Proin dapibus laoreet quam faucibus facilisis. Aenean euismod nisi ipsum, vitae finibus ex auctor et. Interdum et malesuada fames ac ante ipsum primis in faucibus. <a href="#">Read More</a></p>
+            <p><b>Nam tristique metus sit amet enim consequat lacinia.</b><br /> Sed ac nulla imperdiet, accumsan urna eget, finibus arcu. Sed nibh nibh, laoreet vel pretium eget, interdum et urna. Sed tempor orci quis urna pellentesque, a euismod sapien mattis. <a href="#">Read More</a></p>
+        </div>
+
+        <!-- NOTES -->
+        <div class="navcontent" id="notes">
+            <button onclick="openForm()" id="Btn_b">Create Note</button>  <!-- FUNC BUTTON -->
+            <div class="form-popup" id="regform">
+                <form class="form-container">
+                    <h4>Create New Note</h4>
+                    <textarea type="text" rows="4" cols="40" placeholder="Start typing..." required></textarea>
+                    <button type="submit">Create</button>
+                    <button type="button" class="cancel" onclick="closeForm()">Cancel</button>
+                </form>
+            </div>
+            <h4>Notes</h4>
+            <p>Nam in tellus dui. In hac habitasse platea dictumst.</p>
+            <p>Ut vehicula feugiat auctor.</p>
+            <p>Etiam egestas, nibh vitae congue sagittis, ex diam dictum mi, eget tempor massa tortor vitae metus.</p>
+            <p>Cras nec sem semper, porta ligula non, dignissim velit.</p>
+            <p>Maecenas vitae justo at lorem consequat tristique vel a erat.</p>
+        </div>
+
+        <!-- CHATS -->
+        <div class="navcontent" id="chats">
+            <button onclick="composeTo()" id="Btn_c">Compose New</button>  <!-- FUNC BUTTON -->
+            <div class="dropdown" id="dropdwn">
+                <table>
+                    <tr>
+                        <th>To:</th>
+                    </tr>
+                    <tr>
+                        <td><img src="img/user-8.png" /></td>
+                        <td>User Eight</td>
+                    </tr>
+                    <tr>
+                        <td><img src="img/user-5.png" /></td>
+                        <td>User Five</td>
+                    </tr>
+                    <tr>
+                        <td><img src="img/user-4.png" /></td>
+                        <td>User Four</td>
+                    </tr>
+                    <tr>
+                        <td><img src="img/user-1.png" /></td>
+                        <td>User One</td>
+                    </tr>
+                    <tr>
+                        <td><img src="img/user-6.png" /></td>
+                        <td>User Six</td>
+                    </tr>
+                    <tr>
+                        <td><img src="img/user-3.png" /></td>
+                        <td>User Three</td>
+                    </tr>
+                    <tr>
+                        <td><img src="img/user-2.png" /></td>
+                        <td>User Two</td>
+                    </tr>
+                </table>
+            </div>
+            <h4>Chats</h4>
+            <div class="conversation">
+                <div><img src="img/user-5.png" alt="user dp" /></div>
+                <div class="chatname"><span>User Five</span><br /><small>Sure</small></div>
+            </div>
+            <div class="conversation">
+                <div><img src="img/user-8.png" alt="user dp" /></div>
+                <div class="chatname"><span>User Eight</span><br /><small>Good morning</small></div>
+            </div>
+            <div class="conversation">
+                <div><img src="img/user-2.png" alt="user dp" /></div>
+                <div class="chatname"><span>User Two</span><br /><small>See you in office tomorrow</small></div>
+            </div>
+            <div class="conversation">
+                <div><img src="img/user-3.png" alt="user dp" /></div>
+                <div class="chatname"><span>User Three</span><br /><small>Can you send me soft copies please</small></div>
+            </div>
+            <div class="conversation">
+                <div><img src="img/user-6.png" alt="user dp" /></div>
+                <div class="chatname"><span>User Six</span><br /><small>I'll be right back</small></div>
+            </div>
+            <div class="conversation">
+                <div><img src="img/user-1.png" alt="user dp" /></div>
+                <div class="chatname"><span>User One</span><br /><small>Ok bye</small></div>
+            </div>
+        </div>
+
+        <!-- PROFILE -->
+        <div class="navcontent" id="profile">
+            <button id="Btn_d">Edit</button>  <!-- FUNC BUTTON -->
+            <h4>My Profile</h4>
+            <img src="img/user-7.png" width="100px" height="100px" alt="user seven" />
+            <p><span>User Seven</span><br />Authority of the user</p>
+            <table>
+                <tr>
+                    <td>Male</td>
+                    <td>22/03/1996</td>
+                    <td>Kolkata, India</td>
+                </tr>
+                <tr>
+                    <td>+91 9876543210</td>
+                    <td>seven.user@example.com</td>
+                </tr>
+            </table>
+            <p>This is some text about the user. This is some more text about the user. Some more text about the user.</p>
+        </div>
+        <!-- END OF NAVIGATION CONTENTS -->
+
+    </section>
+
+    <!-- SIGNOUT ANIMATION -->
+    <section class="out" id="field3">
+        <div id="field2">
+            <div class="dot-spin"></div>
+            <p>Signing out</p>
+        </div>
+    </section>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

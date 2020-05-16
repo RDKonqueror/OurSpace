@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Accounts - Our Space</title>
+</head>
+<body class="accounts">
+
+    <header>
+    </header>
+
+    <section class="main-cont">
+        <div class="inner-cont">
+            <h4>CHOOSE YOUR ACCOUNT:</h4>
+            <div class="accounts-list">
+                <a href="#user-one" class="prof">
+                    <img src="img/user-1.png" alt="User One" class="dp" />
+                    <span class="name">User One</span>
+                </a>
+                <a href="#user-two" class="prof">
+                    <img src="img/user-2.png" alt="User Two" class="dp" />
+                    <span class="name">User Two</span>
+                </a>
+                <a href="#user-three" class="prof">
+                    <img src="img/user-3.png" alt="User Three" class="dp" />
+                    <span class="name">User Three</span>
+                </a>
+                <a href="#user-four" class="prof">
+                    <img src="img/user-4.png" alt="User Four" class="dp" />
+                    <span class="name">User Four</span>
+                </a>
+                <a href="#user-five" class="prof">
+                    <img src="img/user-5.png" alt="User Five" class="dp" />
+                    <span class="name">User Five</span>
+                </a>
+                <a href="#user-six" class="prof">
+                    <img src="img/user-6.png" alt="User Six" class="dp" />
+                    <span class="name">User Six</span>
+                </a>
+                <a href="user.html" class="prof">
+                    <img src="img/user-7.png" alt="User Seven" class="dp" />
+                    <span class="name">User Seven</span>
+                </a>
+                <a href="#user-eight" class="prof">
+                    <img src="img/user-8.png" alt="User Eight" class="dp" />
+                    <span class="name">User Eight</span>
+                </a>
+            </div>
+            <p>Not an user? <button class="register" onclick="openForm()">Join Us</button></p>
+            <div class="form-popup" id="regform">
+                <form class="form-container">
+                    <h4>Register</h4>
+                    <label for="name">Name</label>
+                    <input type="text" placeholder="Full Name" name="name" required />
+                    <label for="email">Email</label>
+                    <input type="email" placeholder="Email" name="email" required />
+                    <label for="pwd">Password</label>
+                    <input type="password" placeholder="Password" name="pwd" required />
+                    <label for="pwd-confirm">Confirm Password</label>
+                    <input type="password" placeholder="Confirm Password" name="pwd-confirm" required />
+                    <button type="submit">Join</button>
+                    <button type="button" class="cancel" onclick="closeForm()">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+<script>
+function openForm() {
+  document.getElementById("regform").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("regform").style.display = "none";
+}
+</script>
+
+</body>
+</html>
